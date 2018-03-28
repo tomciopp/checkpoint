@@ -24,7 +24,8 @@ defmodule Checkpoint.MixProject do
   defp deps do
     [
       {:plug, ">= 1.0.0"},
-      {:phoenix, ">= 1.0.0"}
+      {:phoenix, ">= 1.0.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
