@@ -7,6 +7,8 @@ defmodule Checkpoint.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
     ]
   end
@@ -23,6 +25,20 @@ defmodule Checkpoint.MixProject do
     [
       {:plug, ">= 1.0.0"},
       {:phoenix, ">= 1.0.0"}
+    ]
+  end
+
+  defp description do
+    """
+    A plug that handles authorization in phoenix applications via policy modules.
+    """
+  end
+
+  defp package do
+    [
+      maintainers: ["tomciopp"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/tomciopp/checkpoint"}
     ]
   end
 end
