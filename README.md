@@ -34,10 +34,6 @@ This plug expects a corresponding policy module that has the same naming structu
 
 ```elixir
 defmodule ExampleWeb.PagePolicy do
-  use ExampleWeb, :controller
-
-  plug(Checkpoint)
-
   # receives conn, assigns, and params
   def index?(conn, %{current_user: user}, _params) do
     if user.admin do
