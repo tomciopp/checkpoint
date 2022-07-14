@@ -16,10 +16,10 @@ defmodule Checkpoint do
     |> controller_module()
     |> Atom.to_string()
     |> String.replace_trailing("Controller", "Policy")
-    |> String.to_existing_atom()
+    |> String.to_atom()
   end
 
-  defp action(conn), do: String.to_existing_atom("#{action_name(conn)}?")
+  defp action(conn), do: String.to_atom("#{action_name(conn)}?")
 
   defp unauthorized(%{private: %{phoenix_format: "json"}} = conn, map) do
     conn
